@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyArray {
 
 	int[] array;
@@ -69,8 +71,26 @@ public class MyArray {
 		return array;
 	}
 
-	// O(2n)
+	// O(n)
 	public int[] rotateArray(int times) {
+		int[] tempArray = new int[array.length];
+		int index = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (i < (array.length - times)) {
+				index++;
+				tempArray[i] = array[i + times];
+			} else {
+				tempArray[i] = array[array.length - times - index];
+				index--;
+			}
+		}
+
+		printArray(tempArray);
+		return array;
+	}
+
+	// O(2n)
+	public int[] rotateArray1(int times) {
 		int[] temp = new int[times];
 		for (int i = 0; i < array.length; i++) {
 			if (i < times) {
@@ -90,21 +110,71 @@ public class MyArray {
 		return array;
 	}
 
-	// O(n)
-	public int[] rotateArray1(int times) {
-		int[] tempArray = new int[array.length];
-		int index = 0;
-		for (int i = 0; i < array.length; i++) {
-			if (i < (array.length - times)) {
-				index++;
-				tempArray[i] = array[i + times];
-			} else {
-				tempArray[i] = array[array.length - times - index];
-				index--;
-			}
+	// O(2n)
+	public int[] SumArray(int arr[], int n) {
+		int[] result = new int[n];
+		int sum = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			sum = sum + arr[i];
+			result[i] = -arr[i];
 		}
 
-		printArray(tempArray);
-		return array;
+		for (int i = 0; i < arr.length; i++) {
+			result[i] = result[i] + sum;
+			System.out.print(result[i] + " ");
+		}
+		return result;
+	}
+
+	/**
+	 * O((n*(n+1))/2) = 1+2+3+4+...
+	 */
+	public int[] twoSum(int[] nums, int target) {
+		int[] result = new int[2];
+
+		for (int i = 0; i < nums.length; i++) {
+			int number1 = nums[i];
+			for (int j = i + 1; j < nums.length; j++) {
+				if (number1 + nums[j] == target) {
+					result[0] = i;
+					result[1] = j;
+
+				}
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * O(n) - Works only if array is sorted.
+	 */
+	public int[] twoSum1(int[] nums, int target) {
+		int[] result = new int[2];
+
+		// Arrays.sort(nums);
+		int lhs = 0, rhs = (nums.length - 1);
+		for (int i = 0; i < nums.length; i++) {
+			if (lhs < rhs) {
+				int sum = nums[lhs] + nums[rhs];
+				if (sum == target) {
+					result[0] = lhs;
+					result[1] = rhs;
+				} else if (sum < target)
+					lhs++;
+				else
+					rhs--;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * O(n) - using HashMap.
+	 */
+	public int[] twoSum2(int[] nums, int target) {
+		int[] result = new int[2];
+		
+		return result;
 	}
 }

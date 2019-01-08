@@ -59,4 +59,28 @@ public class ArrayTest {
 		// Assert.assertSame(mArray, mArray);
 
 	}
+
+	@Test
+	public void testSumArray() {
+		int[] array1 = { 3, 6, 4, 8, 9 };
+		int[] array1_result = { 27, 24, 26, 22, 21 };
+		Assert.assertArrayEquals(array1_result, (mArray.SumArray(array1, 5)));
+
+		int[] array2 = { 4, 5, 7, 3, 10, 1 };
+		int[] array2_result = { 26, 25, 23, 27, 20, 29 };
+		Assert.assertArrayEquals(array2_result, (mArray.SumArray(array2, 6)));
+	}
+
+	@Test
+	public void testTwoSum() {
+		int[] array1 = { 2, 7, 11, 15 };
+		int[] array1_result = { 0, 1 };
+		Assert.assertArrayEquals(array1_result, (mArray.twoSum(array1, 9)));
+
+		int[] array2_result = { 1, 3 };
+		Assert.assertArrayEquals(array2_result, (mArray.twoSum1(array1, 22)));
+
+		Assert.assertArrayEquals(array2_result, (mArray.twoSum2(array1, 22)));
+
+	}
 }
