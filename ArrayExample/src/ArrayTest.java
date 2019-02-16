@@ -102,18 +102,46 @@ public class ArrayTest {
 //		Assert.assertEquals(55, FibonacciLastDigit.getFibonacciLastDigitNaive(10));
 //	}
 
-	@Test
-	public void testGCD() {
-		Assert.assertEquals(10, GCD.gcd_naive(10, 20));
-		Assert.assertEquals(14, GCD.gcd_naive(98, 56));
-		Assert.assertEquals(6, GCD.gcd_naive(18, 48));
-		Assert.assertEquals(12, GCD.gcd_naive(60,108));
-		Assert.assertEquals(1, GCD.gcd_naive(1, 2000000));
-		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
-		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
-		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
-		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
-		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//	@Test
+//	public void testGCD() {
+//		Assert.assertEquals(10, GCD.gcd_naive(10, 20));
+//		Assert.assertEquals(14, GCD.gcd_naive(98, 56));
+//		Assert.assertEquals(6, GCD.gcd_naive(18, 48));
+//		Assert.assertEquals(12, GCD.gcd_naive(60,108));
+//		Assert.assertEquals(1, GCD.gcd_naive(1, 2000000));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//
+//	}
 
+	@Test
+	public void testLCM() {
+//		Assert.assertEquals("226436590403296", LCM.lcm_naive(14159572, 63967072));
+//		Assert.assertEquals(14, GCD.gcd_naive(98, 56));
+//		Assert.assertEquals(6, GCD.gcd_naive(18, 48));
+//		Assert.assertEquals(12, GCD.gcd_naive(60,108));
+//		Assert.assertEquals(1, GCD.gcd_naive(1, 2000000));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+//		Assert.assertEquals(5, GCD.gcd_naive(226553150,1023473145));
+
+	}
+
+	@Test
+	public void testFiboHuge() {
+		Assert.assertEquals(75, FibonacciHuge.getFibonacciHugeNaive(1000, 100));
+		//Assert.assertEquals(5, FibonacciSumLastDigit.getFibonacciSumNaive(1000));
+		//Assert.assertEquals(4, FibonacciSumLastDigit.getFibonacciSumNaive(3));
+		//Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(239));
+		Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(240));
+//		Assert.assertEquals(1, FibonacciHuge.getFibonacciHugeNaive(1));
+//		Assert.assertEquals(1, FibonacciHuge.getFibonacciHugeNaive(2));
+//		Assert.assertEquals(5, FibonacciHuge.getFibonacciHugeNaive(5));
+//		Assert.assertEquals(55, FibonacciHuge.getFibonacciHugeNaive(10));
 	}
 }
