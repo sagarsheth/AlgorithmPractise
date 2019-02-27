@@ -1,5 +1,4 @@
-
-//package week3;
+package week3;
 
 import java.util.*;
 
@@ -12,12 +11,12 @@ public class DifferentSummands {
 		}
 		int index = 1;
 		while (n >= index) {
-			if (summands.contains(index) == false) {
+//			if (summands.contains(index) == false) {
 //				System.out.println("index: " + index + " added to the list");
 //				System.out.println("***************************************t");
 				n = n - index;
 				summands.add(index);
-			}
+//			}
 			index++;
 //			System.out.println("index: " + index);
 //			System.out.println("n: " + n);

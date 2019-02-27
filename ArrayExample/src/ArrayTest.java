@@ -134,11 +134,11 @@ public class ArrayTest {
 
 	@Test
 	public void testFiboHuge() {
-		Assert.assertEquals(75, FibonacciHuge.getFibonacciHugeNaive(1000, 100));
-		//Assert.assertEquals(5, FibonacciSumLastDigit.getFibonacciSumNaive(1000));
-		//Assert.assertEquals(4, FibonacciSumLastDigit.getFibonacciSumNaive(3));
-		//Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(239));
-		Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(240));
+//		Assert.assertEquals(75, FibonacciHuge.getFibonacciHugeNaive(1000, 100));
+		// Assert.assertEquals(5, FibonacciSumLastDigit.getFibonacciSumNaive(1000));
+		// Assert.assertEquals(4, FibonacciSumLastDigit.getFibonacciSumNaive(3));
+		// Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(239));
+		Assert.assertEquals(0, FibonacciSumLastDigit.getFibonacciSumNaive(239));
 //		Assert.assertEquals(1, FibonacciHuge.getFibonacciHugeNaive(1));
 //		Assert.assertEquals(1, FibonacciHuge.getFibonacciHugeNaive(2));
 //		Assert.assertEquals(5, FibonacciHuge.getFibonacciHugeNaive(5));

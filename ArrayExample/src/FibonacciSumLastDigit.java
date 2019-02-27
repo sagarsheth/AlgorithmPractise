@@ -2,25 +2,10 @@ import java.util.*;
 
 public class FibonacciSumLastDigit {
 	public static long getFibonacciSumNaive(long n) {
-		if (n <= 1)
+		if (n <= 2)
 			return n;
 
-		if (n > 10) {
-			return getFibonacciHugeNaive(n, 10);
-		}
-
-		long previous = 0;
-		long current = 1;
-		long sum = 1;
-		for (long i = 1; i < n; i++) {
-			long tmp_previous = previous;
-			previous = current;
-			current = tmp_previous + current;
-			sum = sum + current;
-			// System.out.println("sum: " + sum);
-		}
-		// System.out.println("val: " + sum % 10);
-		return sum % 10;
+		return getFibonacciHugeNaive(n, 10);
 
 	}
 
@@ -31,17 +16,18 @@ public class FibonacciSumLastDigit {
 		long second = 1;
 
 		long res = remainder;
-		long sum = 1;
+
+		long sum = remainder;
+
 		for (int i = 1; i < remainder; i++) {
 			res = (first + second) % m;
 			first = second;
 			second = res;
-			sum = sum + second;
-			System.out.println("sum: " + sum);
+			sum = sum + res;
+			sum = sum % 10;
 		}
 
-		System.out.println("val: " + sum % m);
-		return sum % m;
+		return res % m;
 	}
 
 	public static long get_pisano_period(long m) {
